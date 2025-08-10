@@ -2,14 +2,21 @@ Problem 2023. Is this triangle right-angled?
 https://www.mathworks.com/matlabcentral/cody/groups/7/problems/2023
 
 function flag = isRightAngled(a,b,c)
-         if a^2 + b^2 == c^2 
-        flag = true
-    elseif a^2 + c^2 == b^2 
-        flag = true
-    elseif b^2 + c^2 == a^2 
+
+    sides = [a,b,c]
+    sorted = sort(sides)
+    
+    tol = 1e-9
+    
+    if abs(sorted(1)^2 + sorted(2)^2 - sorted(3)^2) < tol
         flag = true
     else
         flag = false
     end
+    
+    
+    
+    
+
 
 end
