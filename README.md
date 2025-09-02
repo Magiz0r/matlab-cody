@@ -7,4 +7,5 @@ problem 2024(fibonacci)
 problem 2022  
 problem 23(ismember)  
 problem 1035  
-Bifurcation Diagram for the Logistic Map!!!!!!!!
+Bifurcation Diagram for the Logistic Map!!!!!!!!  
+Computation of the Feigenbaum delta!!!!!!!!
