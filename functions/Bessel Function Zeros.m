@@ -12,8 +12,9 @@ bzeros = zeros(num_roots, num_functions);
 for col = 1:num_functions
     n = col - 1;
     for row = 1:num_roots
-        j = @(x, n, theta) (1/pi)*cos(x*sin(theta)-n*theta);
-        bzeros(row, n+1) = fzero(@(x) integral(@(theta) j(x, n, theta), 0, pi), zeros_guess(row,n+1));
+
+        bzeros(row, col) = fzero(@(x) integral(@(theta) (1/pi)*cos(x*sin(theta) - n*theta), 0, pi), zeros_guess(row, col));
+    
     end
 end
 
